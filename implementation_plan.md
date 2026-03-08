@@ -265,28 +265,28 @@ Para facilitar la labor del equipo de arte y UI, aquí presentamos los mockups c
 *   **Zona Superior:** Costo de Energía (🟢) arriba a la izquierda.
 *   **Zona Central:** El Render 3D del niño. Fondo con patrón abstracto del Clan.
 *   **Zona Inferior (Pie de carta):** Nombre del personaje, ícono de Espada con valor de Ataque (⚔️) e ícono de Escudo con valor de Vida (🛡️).
-![Referencia Héroe Champion](C:\Users\balru\.gemini\antigravity\brain\965ddd01-0422-4cc5-a383-96d61ae59bd2\mockup_champion_card_1773006765297.png)
+![Referencia Héroe Champion](mockup_champion_card_1773006765297.png)
 
 ### 2. Carta "Bestia Kombat" (Criatura Evolucionada)
 *   **Layout:** Agresivo, oscuro, "Destruido". Indica rareza premium.
 *   **Zona Superior:** Costo de Energía (🟢).
 *   **Zona Central:** Arte 2D hiperdetallado de la bestia/criatura original.
 *   **Zona Inferior (Pie de carta):** Mismas estadísticas que los Héroes (Ataque ⚔️ y Vida 🛡️), pero con un panel de nombre más oscuro e imponente.
-![Referencia Bestia Kombat](C:\Users\balru\.gemini\antigravity\brain\965ddd01-0422-4cc5-a383-96d61ae59bd2\mockup_kombat_card_1773006782784.png)
+![Referencia Bestia Kombat](mockup_kombat_card_1773006782784.png)
 
 ### 3. Carta "Trompo Físico" (Objeto Mágico)
 *   **Layout:** Vertical, enfocado en mostrar el producto real y su habilidad mágica. **No tiene stats de combate**.
 *   **Zona Superior:** Costo de Energía (🟢) arriba a la izquierda.
 *   **Zona Central/Superior:** El render fotográfico del trompo físico flotando.
 *   **Zona Inferior:** Un recuadro grande de texto que explica el efecto de la carta en el juego y un texto de "Sabor/Lore" describiendo los materiales reales de venta del trompo.
-![Referencia Trompo Físico](C:\Users\balru\.gemini\antigravity\brain\965ddd01-0422-4cc5-a383-96d61ae59bd2\mockup_trompo_card_1773006801617.png)
+![Referencia Trompo Físico](mockup_trompo_card_1773006801617.png)
 
 ### 4. Carta "Locación / Arena" (Modificador de Terreno)
 *   **Layout:** Enfocado panorámicamente en el paisaje.
 *   **Zona Superior:** Costo de Energía (🟢).
 *   **Zona Central:** Ilustración apaisada de la zona o campo de batalla.
 *   **Zona Inferior:** Como los objetos, no tiene stats de personaje. El tercio inferior es un pergamino o caja de texto que detalla el "Efecto Pasivo" de la Arena. El marco debe representar los materiales del Clan (ej. piedra de templo para Milenarios).
-![Referencia Arena Locación](C:\Users\balru\.gemini\antigravity\brain\965ddd01-0422-4cc5-a383-96d61ae59bd2\mockup_arena_card_1773006819423.png)
+![Referencia Arena Locación](mockup_arena_card_1773006819423.png)
 
 ---
 
@@ -311,7 +311,7 @@ Instrucciones para el Diseñador Gráfico / UI:
     *   **Caja de Texto (Lore/Habilidad):** El texto descriptivo que explica la habilidad del trompo o la breve historia ancestral de la criatura.
     *   **Botón Inferior (Progreso):** En lugar del botón "Upgrade", aquí habrá un medidor de progresión: *"Cartas obtenidas: 2/5 para versión Foil"*.
 
-![Referencia UI Principal Álbum / Alternativa](file:///C:/TCG_CometaChampions/UI_test.png)
+![Referencia UI Principal Álbum / Alternativa](./UI_test.png)
 
 ---
 
