@@ -297,7 +297,13 @@ Panorámicas inmersivas que definen las reglas de combate por clan.
 *   **Zona Superior:** Costo de Energía (🟢) y el **Ícono del Clan** (el trompo pertenece al clan que lo fabrica).
 *   **Zona Central/Superior:** El render fotográfico del trompo físico flotando.
 *   **Zona Inferior:** Un recuadro grande de texto que explica el efecto de la carta en el juego y un texto de "Sabor/Lore" describiendo los materiales reales de venta del trompo.
-![Referencia Trompo Físico](mockup_trompo_card_1773006801617.png)
+*   **Zona Inferior:** Un recuadro grande de texto que explica el efecto de la carta en el juego y un texto de "Sabor/Lore" describiendo los materiales reales de venta del trompo.
+
+#### Galería de Referencia (Trompos Físicos):
+![Trompo Azteca (Milenarios)](assets/mockups/trompo_azteca_milenarios_mockup_1773457634914.png)
+![Trompo King Cobra (Depredadores)](assets/mockups/trompo_king_cobra_depredadores_mockup_1773454224567_1773457649782.png)
+![Trompo Jumbo Cobra (Fugitivos)](assets/mockups/trompo_jumbo_cobra_fugitivos_mockup_1773454245678_1773457665354.png)
+![Trompo Rex (Míticos)](assets/mockups/trompo_rex_miticos_mockup_1773454266789_1773457678678.png)
 
 ### 4. Carta "Locación / Arena" (Modificador de Terreno)
 *   **Layout:** Enfocado panorámicamente en el paisaje.

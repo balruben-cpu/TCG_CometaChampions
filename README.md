@@ -44,6 +44,13 @@ Arte 2D detallado para las cartas más poderosas de la colección.
 | :---: | :---: | :---: | :---: |
 | ![Azteca B](assets/mockups/azteca_guardian_bestia_milenarios_mockup_1773453577040.png) | ![Panther B](assets/mockups/panther_cazadora_bestia_depredadores_mockup_1773453590450.png) | ![Diamante B](assets/mockups/diamante_leviatan_bestia_fugitivos_mockup_1773453664321_1773453604986.png) | ![Fénix B](assets/mockups/fenix_ave_ignea_bestia_miticos_mockup_1773453692456_png_1773453621317.png) |
 
+### Arenas / Locaciones (Zonas de Batalla)
+Panorámicas inmersivas que definen las reglas de combate por clan.
+
+| Templo Milenario | Ruinas de Draconia | Red de la Viuda | Santuario del Sol |
+| :---: | :---: | :---: | :---: |
+| ![Templo](assets/mockups/templo_milenario_arena_mockup_1773454124187.png) | ![Ruinas](assets/mockups/ruinas_draconia_arena_mockup_1773454136070.png) | ![Red](assets/mockups/red_viuda_arena_mockup_1773454224567_1773454148345.png) | ![Santuario](assets/mockups/santuario_sol_arena_mockup_1773454245678_1773454160365.png) |
+
 ---
 
 ## 📂 Documentación Técnica
@@ -58,7 +65,7 @@ Para una inmersión profunda en las reglas, stats de las 80 cartas y el plan de 
 - [x] Diseño de los 4 Clanes y Círculo de Ventajas.
 - [x] Listado completo de las 80 cartas del Set Base.
 - [x] Auditoría de Balance (Stats vs Costo).
-- [x] Prototipado visual de Héroes y Bestias.
+- [x] Prototipado visual de Héroes, Bestias y Arenas.
 - [ ] Implementación de UI de Álbum en la App.
 - [ ] Producción de Cartas Físicas.
 
