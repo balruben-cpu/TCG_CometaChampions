@@ -51,6 +51,13 @@ Panorámicas inmersivas que definen las reglas de combate por clan.
 | :---: | :---: | :---: | :---: |
 | ![Templo](assets/mockups/templo_milenario_arena_mockup_1773454124187.png) | ![Ruinas](assets/mockups/ruinas_draconia_arena_mockup_1773454136070.png) | ![Red](assets/mockups/red_viuda_arena_mockup_1773454224567_1773454148345.png) | ![Santuario](assets/mockups/santuario_sol_arena_mockup_1773454245678_1773454160365.png) |
 
+### Trompos Físicos (Objetos / Magia)
+Renders realistas del producto físico con sus efectos en el juego.
+
+| Trompo Azteca | Trompo King Cobra | Trompo Jumbo Cobra | Trompo Rex |
+| :---: | :---: | :---: | :---: |
+| ![Azteca T](assets/mockups/trompo_azteca_milenarios_mockup_1773457634914.png) | ![King T](assets/mockups/trompo_king_cobra_depredadores_mockup_1773454224567_1773457649782.png) | ![Jumbo T](assets/mockups/trompo_jumbo_cobra_fugitivos_mockup_1773454245678_1773457665354.png) | ![Rex T](assets/mockups/trompo_rex_miticos_mockup_1773454266789_1773457678678.png) |
+
 ---
 
 ## 📂 Documentación Técnica
