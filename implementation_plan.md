@@ -404,3 +404,27 @@ Inspirado en los TCG modernos para lograr batallas limpias, cada turno sigue est
 *   *Nota de Daño Permanente:* A diferencia de otros juegos, el daño en *Cometa Champions* se queda en la carta entre turnos. Si un personaje sobrevive con 1 de Vida, el oponente lo puede rematar después con una carta de Trompo Físico que haga poco daño.
 
 *Con estas reglas y los valores (Stats) especificados en los anexos, la colección digital no solo sirve como galería de arte, sino que conforma un motor lógico balanceado listo para producción de juguetes.*
+
+---
+
+## 13. Ficha Técnica de Dimensiones y Formatos
+
+Para asegurar la compatibilidad entre la aplicación digital y la futura producción física, se han definido las siguientes especificaciones técnicas basadas en el estándar **Standard TCG** (utilizado por juegos como *Disney Lorcana* y *Magic: The Gathering*).
+
+### A. Especificaciones para Impresión (Físico)
+*   **Tamaño Final (Corte):** 63.5 mm x 88.9 mm (2.5" x 3.5").
+*   **Tamaño con Sangría (Bleed):** 69.5 mm x 94.9 mm (Se recomiendan 3 mm de margen adicional por cada lado para evitar bordes blancos al cortar).
+*   **Radio de Esquina:** 3.5 mm.
+*   **Grosor Sugerido:** 0.30 mm a 0.35 mm (300gsm a 350gsm).
+
+### B. Especificaciones Digitales (App Mobile)
+*   **Relación de Aspecto:** 1 : 1.4 (Ancho : Alto).
+*   **Resolución Estándar:** 750 x 1050 px (Equivalente a 300 DPI - Ideal para fluidez en dispositivos gama media).
+*   **Resolución Premium / Retina:** 1500 x 2100 px (Equivalente a 600 DPI - Recomendado para visualización de "Cartas Legendarias" con zoom).
+*   **Formato de Archivo:** 
+    *   *UI de la App:* PNG o WebP con transparencia (si el marco es irregular).
+    *   *Texturas del álbum:* Atlas de texturas comprimidos para optimizar memoria RAM.
+
+### C. Guía de Diseño (Safe Zone)
+Para evitar que elementos importantes (costo, stats) queden muy cerca del borde físico o sean tapados por marcos de la UI en el móvil:
+*   **Margen de Seguridad:** Mantener todo el texto e íconos críticos al menos a **5 mm** del borde final de la carta.

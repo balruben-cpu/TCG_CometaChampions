@@ -77,4 +77,12 @@ Para una inmersión profunda en las reglas, stats de las 80 cartas y el plan de 
 - [ ] Producción de Cartas Físicas.
 
 ---
+
+## 📏 Especificaciones Técnicas (Standard TCG)
+Para mantener la compatibilidad con el mercado internacional (basado en estándares de Lorcana/Magic):
+*   **Tamaño Físico:** 63.5 x 88.9 mm (2.5" x 3.5").
+*   **Resolución Digital:** 750 x 1050 px (Mínimo 300 DPI).
+*   **Aspect Ratio:** 1 : 1.4.
+
+---
 *Desarrollado con ❤️ para la comunidad de Cometa Champions.*
