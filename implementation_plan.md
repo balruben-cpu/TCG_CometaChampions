@@ -285,6 +285,13 @@ Para facilitar la labor del equipo de arte y UI, aquí presentamos los mockups c
 ![Diamante Leviatán (Fugitivos)](assets/mockups/diamante_leviatan_bestia_fugitivos_mockup_1773453664321_1773453604986.png)
 ![Fénix Ave Ígnea (Míticos)](assets/mockups/fenix_ave_ignea_bestia_miticos_mockup_1773453692456_png_1773453621317.png)
 
+### Arenas / Locaciones (Zonas de Batalla)
+Panorámicas inmersivas que definen las reglas de combate por clan.
+
+| Templo Milenario | Ruinas de Draconia | Red de la Viuda | Santuario del Sol |
+| :---: | :---: | :---: | :---: |
+| ![Templo](assets/mockups/templo_milenario_arena_mockup_1773454124187.png) | ![Ruinas](assets/mockups/ruinas_draconia_arena_mockup_1773454136070.png) | ![Red](assets/mockups/red_viuda_arena_mockup_1773454224567_1773454148345.png) | ![Santuario](assets/mockups/santuario_sol_arena_mockup_1773454245678_1773454160365.png) |
+
 ### 3. Carta "Trompo Físico" (Objeto Mágico)
 *   **Layout:** Vertical, enfocado en mostrar el producto real y su habilidad mágica. **No tiene stats de combate**.
 *   **Zona Superior:** Costo de Energía (🟢) y el **Ícono del Clan** (el trompo pertenece al clan que lo fabrica).
@@ -297,7 +304,13 @@ Para facilitar la labor del equipo de arte y UI, aquí presentamos los mockups c
 *   **Zona Superior:** Costo de Energía (🟢) y el **Ícono del Clan Dominante** (para indicar a quién beneficia la arena).
 *   **Zona Central:** Ilustración apaisada de la zona o campo de batalla.
 *   **Zona Inferior:** Como los objetos, no tiene stats de personaje. El tercio inferior es un pergamino o caja de texto que detalla el "Efecto Pasivo" de la Arena. El marco debe representar los materiales del Clan (ej. piedra de templo para Milenarios).
-![Referencia Arena Locación](mockup_arena_card_1773006819423.png)
+*   **Zona Inferior:** Como los objetos, no tiene stats de personaje. El tercio inferior es un pergamino o caja de texto que detalla el "Efecto Pasivo" de la Arena. El marco debe representar los materiales del Clan (ej. piedra de templo para Milenarios).
+
+#### Galería de Referencia (Arenas / Locaciones):
+![Templo Milenario (Milenarios)](assets/mockups/templo_milenario_arena_mockup_1773454124187.png)
+![Ruinas de Draconia (Depredadores)](assets/mockups/ruinas_draconia_arena_mockup_1773454136070.png)
+![Red de la Viuda (Fugitivos)](assets/mockups/red_viuda_arena_mockup_1773454224567_1773454148345.png)
+![Santuario del Sol (Míticos)](assets/mockups/santuario_sol_arena_mockup_1773454245678_1773454160365.png)
 
 ---
 
