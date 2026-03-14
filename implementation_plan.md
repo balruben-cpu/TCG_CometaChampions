@@ -176,8 +176,8 @@ A continuación, la estructura de la tabla con los **20 trompos completada**, al
 | **Trompo Turbo Cobra** | Milenarios | 1 | Objeto / Descarte | Roba 1 carta y descarta 1 carta para ciclar tu mazo rápidamente. | *Diseño hiper-estilizado para minimizar la fricción en la pista.* |
 | **Trompo Tigre** | Depredadores | 5 | Objeto / Equipamiento | Equípalo a un aliado para ganar *Golpe Penetrante* (Ignora escudos enemigos). | *Con patrones atigrados naranjas. Un depredador nato de plástico.* |
 | **Trompo Fénix** | Míticos | 6 | Hechizo / Resurrección | Elige un personaje aliado derrotado de tu cementerio y devuélvelo a tu mano. | *Tonos cálidos rojizos. Promete levantar a cualquier jugador caído.* |
-| **Trompo Diamante** | Fugitivos | 4 | Objeto / Fortificación | Da a todos tus personajes Místicos +2 de Vida máxima permanente. | *Translúcido cristalino, prácticamente inquebrantable a caídas.* |
-| **Trompo Turbo King** | Fugitivos | 6 | Ataque Mágico (Poder) | Haz daño igual a la suma del costo de tus personajes Milenarios en el campo. | *Coronado con detalles dorados. Hecho para verdaderos líderes.* |
+| **Trompo Diamante** | Fugitivos | 4 | Objeto / Fortificación | Da a todos tus personajes **Fugitivos** +2 de Vida máxima permanente. | *Translúcido cristalino, prácticamente inquebrantable a caídas.* |
+| **Trompo Turbo King** | Fugitivos | 6 | Ataque Mágico (Poder) | Haz daño igual a la suma del costo de tus personajes **Fugitivos** en el campo. | *Coronado con detalles dorados. Hecho para verdaderos líderes.* |
 | **Trompo Turbo Flash** | Míticos | 3 | Hechizo / Reubicación | Devuelve un personaje enemigo con costo 3 o menor a la mano de su dueño. | *Pintura ultrabrillante. Desaparece tan rápido como entra al ring.* |
 | **Trompo Spider** | Fugitivos | 3 | Objeto / Trampa | Juega boca abajo. El primer enemigo que ataque este turno queda "Enredado" (no ataca). | *Diseño con telarañas grabadas en el cuerpo para un agarre mortal.* |
 | **Trompo Turbo Dragón** | Depredadores | 7 | Hechizo / Cataclismo | Destruye todas las cartas de "Arena/Locación" activas y hace 3 de daño al líder. | *Edición especial. Las "escamas" laterales desgarran el aire al girar.* |
@@ -207,7 +207,7 @@ He dividido las 20 locaciones equitativamente: 5 Arenas/Territorios para cada un
 | **Laboratorio del Rey** | Fugitivos | 4 | Permite buscar y añadir una carta "Trompo Físico" directamente de tu mazo. | Guarida científica llena de piezas de trompos y energía errática. |
 | **La Pista de Carreras**| Milenarios | 2 | Todos los campeones con la palabra "Turbo" ganan +2 de Ataque Inmediato. | Desfiladero de piedra modificado para correr a velocidad sónica. |
 | **Pozo de los Depredadores**| Depredadores | 3 | El jugador con menos Vida sacrifica un campeón para ganar poder. | Arena de combate clandestina en las cloacas de la ciudad. |
-| **Cementerio de Juguetes** | Míticos | 5 | Invoca un "Espíritu Cometa" de Vida 1/Ataque 1 cada vez que un aliado muera. | Un valle llenos de trompos antiguos, oxidados y olvidados. |
+| **Cementerio de Juguetes** | Milenarios | 5 | Invoca un "Espíritu Cometa" de Vida 1/Ataque 1 cada vez que un aliado muera. | Un valle lleno de trompos antiguos, oxidados y olvidados, herencia de los Milenarios. |
 | **Campamento Panther** | Depredadores | 3 | Tus emboscadas no tienen costo de energía la primera vez. | Asentamiento nómada escondido en la penumbra del bosque. |
 | **Bóveda del Cometa** | Fugitivos | 6 | Ningún jugador puede modificar sus Puntos de Vida Base. | Fortaleza de máxima seguridad donde se esconde el polvo mágico. |
 | **La Arena Campeones** | Neutral | 7 | (Carta Épica) Todos los personajes recuperan la vida completa al entrar. | El coliseo brillante y definitivo donde convergen los 4 clanes. |
@@ -265,25 +265,36 @@ Para facilitar la labor del equipo de arte y UI, aquí presentamos los mockups c
 *   **Zona Superior:** Costo de Energía (🟢) arriba a la izquierda.
 *   **Zona Central:** El Render 3D del niño. Fondo con patrón abstracto del Clan.
 *   **Zona Inferior (Pie de carta):** Nombre del personaje, ícono de Espada con valor de Ataque (⚔️) e ícono de Escudo con valor de Vida (🛡️).
-![Referencia Héroe Champion](mockup_champion_card_1773006765297.png)
+*   **Indicador de Ventaja (Visual Tip):** El ícono del Clan debe incluir una pequeña flecha o borde de color que apunte simbólicamente al clan sobre el cual tiene ventaja, facilitando el aprendizaje del "Círculo Cometa". (Ej: El árbol Milenario tiene una pequeña raíz que envuelve una cadena).
+
+#### Galería de Referencia (Héroes Legendarios):
+![Turbo Dragón (Depredadores)](assets/mockups/turbo_dragon_card_mockup_1773452690799.png)
+![Azteca (Milenarios)](assets/mockups/azteca_card_milenarios_mockup_1773452793855.png)
+![Jumbo Cobra (Fugitivos)](assets/mockups/jumbo_cobra_card_fugitivos_mockup_1773452806022.png)
+![Rex (Míticos)](assets/mockups/rex_card_miticos_mockup_1773452819283.png)
 
 ### 2. Carta "Bestia Kombat" (Criatura Evolucionada)
 *   **Layout:** Agresivo, oscuro, "Destruido". Indica rareza premium.
-*   **Zona Superior:** Costo de Energía (🟢).
+*   **Zona Superior:** Costo de Energía (🟢) y el **Ícono del Clan** (cada bestia pertenece al clan de su invocador).
 *   **Zona Central:** Arte 2D hiperdetallado de la bestia/criatura original.
 *   **Zona Inferior (Pie de carta):** Mismas estadísticas que los Héroes (Ataque ⚔️ y Vida 🛡️), pero con un panel de nombre más oscuro e imponente.
-![Referencia Bestia Kombat](mockup_kombat_card_1773006782784.png)
+
+#### Galería de Referencia (Bestias Kombat):
+![Azteca Guardián (Milenarios)](assets/mockups/azteca_guardian_bestia_milenarios_mockup_1773453577040.png)
+![Panther Cazadora (Depredadores)](assets/mockups/panther_cazadora_bestia_depredadores_mockup_1773453590450.png)
+![Diamante Leviatán (Fugitivos)](assets/mockups/diamante_leviatan_bestia_fugitivos_mockup_1773453664321_1773453604986.png)
+![Fénix Ave Ígnea (Míticos)](assets/mockups/fenix_ave_ignea_bestia_miticos_mockup_1773453692456_png_1773453621317.png)
 
 ### 3. Carta "Trompo Físico" (Objeto Mágico)
 *   **Layout:** Vertical, enfocado en mostrar el producto real y su habilidad mágica. **No tiene stats de combate**.
-*   **Zona Superior:** Costo de Energía (🟢) arriba a la izquierda.
+*   **Zona Superior:** Costo de Energía (🟢) y el **Ícono del Clan** (el trompo pertenece al clan que lo fabrica).
 *   **Zona Central/Superior:** El render fotográfico del trompo físico flotando.
 *   **Zona Inferior:** Un recuadro grande de texto que explica el efecto de la carta en el juego y un texto de "Sabor/Lore" describiendo los materiales reales de venta del trompo.
 ![Referencia Trompo Físico](mockup_trompo_card_1773006801617.png)
 
 ### 4. Carta "Locación / Arena" (Modificador de Terreno)
 *   **Layout:** Enfocado panorámicamente en el paisaje.
-*   **Zona Superior:** Costo de Energía (🟢).
+*   **Zona Superior:** Costo de Energía (🟢) y el **Ícono del Clan Dominante** (para indicar a quién beneficia la arena).
 *   **Zona Central:** Ilustración apaisada de la zona o campo de batalla.
 *   **Zona Inferior:** Como los objetos, no tiene stats de personaje. El tercio inferior es un pergamino o caja de texto que detalla el "Efecto Pasivo" de la Arena. El marco debe representar los materiales del Clan (ej. piedra de templo para Milenarios).
 ![Referencia Arena Locación](mockup_arena_card_1773006819423.png)
@@ -306,7 +317,7 @@ Instrucciones para el Diseñador Gráfico / UI:
     *   *Interacción:* El jugador debe poder deslizar el dedo (Swipe) horizontalmente sobre esta zona para **rotar la carta libremente en su eje vertical (Y)**, permitiendo inspeccionar la parte trasera (Logo Cometa) y ver cómo el shader metálico interactúa con la luz frontal en tiempo real.
 
 *   **Panel Derecho (Información y Stats):**
-    *   **Encabezado:** Nombre de la carta en grande y el ícono de su Clan (ej. Símbolo del dragón para Depredadores).
+    *   **Encabezado:** Nombre de la carta en grande y el ícono de su Clan (ej. Símbolo del dragón para Depredadores). Debajo del clan, mostrar texto dinámico: **"Ventaja contra: [Nombre del Clan]"** para educar al jugador.
     *   **Barras de Estadísticas:** Reemplazar las barras actuales (*Health, Damage*, etc.) por los valores fijos de TCG:  **Costo (🟢)**, **Fuerza (⚔️)** y **Vida (🛡️)** (para Trompos y Arenas, estas barras se ocultan).
     *   **Caja de Texto (Lore/Habilidad):** El texto descriptivo que explica la habilidad del trompo o la breve historia ancestral de la criatura.
     *   **Botón Inferior (Progreso):** En lugar del botón "Upgrade", aquí habrá un medidor de progresión: *"Cartas obtenidas: 2/5 para versión Foil"*.
@@ -319,6 +330,17 @@ Instrucciones para el Diseñador Gráfico / UI:
 Si bien la versión inicial dentro de la app móvil es estrictamente de coleccionismo, hemos diseñado los atributos de las cartas (Costo, Fuerza, Vida, Habilidad) para que el juego sea matemático y legalmente jugable en el mundo real (físico). 
 
 Aquí detallo cómo fluiría una partida física de *Cometa Champions TCG* basada en esta estructura, lista para cuando se impriman los cartones.
+
+### El Ciclo de Ventajas (El Círculo Cometa)
+Para añadir profundidad táctica, los clanes siguen un sistema de ventajas circular. Un personaje tiene ventaja ofensiva sobre otro si pertenece al clan superior en el círculo:
+
+*   **Milenarios** (🌳) tienen ventaja sobre **Fugitivos** (⛓️).
+*   **Fugitivos** (⛓️) tienen ventaja sobre **Depredadores** (🪓).
+*   **Depredadores** (🪓) tienen ventaja sobre **Míticos** (🐉).
+*   **Míticos** (🐉) tienen ventaja sobre **Milenarios** (🌳).
+
+**Mecánica de Ventaja:** 
+Cuando un personaje ataca a un objetivo sobre el cual tiene ventaja de clan, inflige **+1 de Daño (⚔️)** adicional. Esta bonificación se aplica antes de calcular cualquier otro modificador o escudo.
 
 ### Conceptos Básicos
 *   **Objetivo del Juego:** Reducir los Puntos de Vida (HP) del jugador rival de 20 a 0.
@@ -356,8 +378,10 @@ Inspirado en los TCG modernos para lograr batallas limpias, cada turno sigue est
 *   Cuando declaras un ataque, eliges si golpeas a un **Personaje Rival (girado)** o directo a los **Puntos de Vida del Jugador Oponente**.
 *   Solo puedes atacar a un campeón enemigo si este está *girado / agotado* (es decir, lo atacas mientras está expuesto después de haber hecho una acción; como en juego reales, si te defiendes no puedes atacar).
 *   **El Choque:** Si combaten dos cartas (ej. Avispón de Fuerza 3 / Vida 1 contra Diamantín Fuerza 1 / Vida 2):
-    *   Avispón le hace 3 de daño a Diamantín, y Diamantín le hace 1 de daño a Avispón *al mismo tiempo*.
-    *   Avispón queda con Vida 0 (destruido) y Diamantín queda con Vida -1 (destruido). ¡Ambos van al cementerio!
+    *   **Cálculo de Ventaja:** Si el atacante tiene ventaja de clan, suma +1 a su Fuerza. 
+    *   En el ejemplo: Si Avispón (Depredador) ataca a un Mítico, su Fuerza sube de 3 a 4 para ese ataque.
+    *   Ambas cartas se hacen daño al mismo tiempo: El daño recibido se resta de la Vida actual.
+    *   Una carta con Vida 0 o menor va al cementerio.
 *   *Nota de Daño Permanente:* A diferencia de otros juegos, el daño en *Cometa Champions* se queda en la carta entre turnos. Si un personaje sobrevive con 1 de Vida, el oponente lo puede rematar después con una carta de Trompo Físico que haga poco daño.
 
 *Con estas reglas y los valores (Stats) especificados en los anexos, la colección digital no solo sirve como galería de arte, sino que conforma un motor lógico balanceado listo para producción de juguetes.*
