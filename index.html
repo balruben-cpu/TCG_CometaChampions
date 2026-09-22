@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cometa Champions: Official TCG - Presentación & Showcase Interactivo</title>
+  <meta name="description" content="Presentación interactiva y catálogo oficial del Juego de Cartas Coleccionables (TCG) de Cometa Champions. Set Base completo de 80 cartas, clanes y mecánicas." />
+  <link rel="stylesheet" href="css/presentation.css" />
+  <link rel="icon" type="image/png" href="Clans_Icon/Mythicals_B.png" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="nav-brand" onclick="window.location.reload()">
+      <span>☄️ COMETA CHAMPIONS</span>
+      <span class="brand-badge">TCG OFICIAL</span>
+    </div>
+
+    <!-- Mode Switcher -->
+    <div class="mode-switcher">
+      <button class="mode-btn active" id="btn-mode-presentation">
+        <span>🖥️</span> Modo Presentación
+      </button>
+      <button class="mode-btn" id="btn-mode-showcase">
+        <span>🎴</span> Catálogo (80 Cartas)
+      </button>
+      <button class="mode-btn" id="btn-mode-battle">
+        <span>⚔️</span> Simulador de Batalla
+      </button>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="nav-actions">
+      <button class="btn-icon" id="btn-global-help" title="Cómo Jugar y Reglas del Juego">
+        ❓ Ayuda
+      </button>
+      <button id="theme-toggle-btn" class="theme-toggle-btn" title="Cambiar Tema (Día / Noche)">
+        <span id="theme-icon">🌙</span>
+        <span id="theme-label">Night</span>
+      </button>
+      <button class="btn-icon" id="btn-toggle-audio" title="Activar/Desactivar Efectos de Sonido">
+        🔊 Sonido
+      </button>
+      <button class="btn-icon" id="btn-fullscreen" title="Modo Pantalla Completa (F)">
+        ⛶ Pantalla Completa
+      </button>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MODO PRESENTACIÓN (SLIDES EJECUTIVOS)
+       ========================================================================= -->
+  <main id="presentation-view">
+    <div class="slides-viewport">
+
+      <!-- SLIDE 1: PORTADA & VISIÓN TRANS-MEDIA -->
+      <section class="slide active" id="slide-0">
+        <div class="slide-content-card">
+          <div style="display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto;">
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.35rem 1rem; border-radius: 9999px; margin-bottom: 1.25rem;">
+              <span style="color: #fbbf24; font-weight: 700; font-size: 0.85rem; letter-spacing: 0.05em;">EXPANSIÓN OFICIAL FÍSICA & DIGITAL</span>
+            </div>
+
+            <h1 class="hero-gradient-title" style="font-size: 3.2rem; font-weight: 900; line-height: 1.1; margin-bottom: 1rem; background: linear-gradient(135deg, #fff 20%, #f5c518 60%, #2997ff 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+              COMETA CHAMPIONS: THE TCG
+            </h1>
+
+            <p style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.6; max-width: 780px; margin-bottom: 2rem;">
+              El ecosistema definitivo de cartas coleccionables que une el **juguete físico tradicional**, la **aplicación móvil** y la **estrategia competitiva de mesa**.
+            </p>
+
+            <!-- Key Feature Badges -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2.5rem;">
+              <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); padding: 0.75rem 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 0.6rem;">
+                <span style="font-size: 1.5rem;">🃏</span>
+                <div style="text-align: left;">
+                  <div style="font-weight: 800; font-size: 1rem; color: #fff;">80 Cartas Listas</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Set Base "Tomo 1" Completo</div>
+                </div>
+              </div>
+
+              <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); padding: 0.75rem 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 0.6rem;">
+                <span style="font-size: 1.5rem;">🌀</span>
+                <div style="text-align: left;">
+                  <div style="font-weight: 800; font-size: 1rem; color: #fff;">4 Clanes Balanceados</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">Círculo de Ventaja Táctica</div>
+                </div>
+              </div>
+
+              <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border-glass); padding: 0.75rem 1.25rem; border-radius: 12px; display: flex; align-items: center; gap: 0.6rem;">
+                <span style="font-size: 1.5rem;">📐</span>
+                <div style="text-align: left;">
+                  <div style="font-weight: 800; font-size: 1rem; color: #fff;">Estándar Internacional</div>
+                  <div style="font-size: 0.75rem; color: var(--text-muted);">63.5 x 88.9 mm (300 DPI)</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA Actions -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <button class="btn-primary" onclick="document.getElementById('btn-next-slide').click()">
+                <span>Continuar Presentación</span> ➔
+              </button>
+              <button class="btn-secondary" data-action="go-to-showcase">
+                <span>Explorar Catálogo 3D</span> 🎴
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: LA OPORTUNIDAD & RETENCIÓN MÓVIL -->
+      <section class="slide" id="slide-1">
+        <div class="slide-content-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <div>
+              <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">VALOR ESTRATÉGICO & NEGOCIO</span>
+              <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">¿Por qué un TCG en Cometa Champions?</h2>
+            </div>
+            <div style="font-size: 2.5rem;">📈</div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.5rem; border-radius: 14px;">
+              <div style="font-size: 2rem; margin-bottom: 0.75rem;">🚀</div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #10b981;">Impulso Masivo al DAU</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                El sistema de sobres diarios, álbum coleccionable y recolección de <em>Esencia Cometa</em> genera un hábito diario obligatorio, disparando la retención D7 y D30.
+              </p>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.5rem; border-radius: 14px;">
+              <div style="font-size: 2rem; margin-bottom: 0.75rem;">🔄</div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #a855f7;">Revalorización del Core Loop</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                Jugar partidas de historia y modo competitivo deja de sentirse vacío: ahora cada victoria es el medio para ganar sobres y desbloquear páginas del álbum virtual.
+              </p>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.5rem; border-radius: 14px;">
+              <div style="font-size: 2rem; margin-bottom: 0.75rem;">🌉</div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #f59e0b;">Sinergia Físico-Digital</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                Construye demanda orgánica (<em>hype</em>) hacia la compra de trompos físicos en tiendas reales, al incluir cartas físicas con códigos QR para canjear en la app.
+              </p>
+            </div>
+
+            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.5rem; border-radius: 14px;">
+              <div style="font-size: 2rem; margin-bottom: 0.75rem;">💎</div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: #06b6d4;">Alto Valor / Bajo Costo</h3>
+              <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5;">
+                Al utilizar shaders holográficos e interactividad 3D, el jugador percibe una actualización monumental y premium, con un costo técnico sumamente contenido.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: EL CÍRCULO COMETA & CLANES -->
+      <section class="slide" id="slide-2">
+        <div class="slide-content-card">
+          <div style="margin-bottom: 1.5rem;">
+            <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">REGLAS DE COMBATE TCG</span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">El Círculo Cometa (Los 4 Clanes)</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Ecosistema avanzado de <em>Piedra, Papel o Tijera</em>. Atacar a un clan débil otorga <strong>+1 de Daño (⚔️)</strong> adicional.
+            </p>
+          </div>
+
+          <div class="clan-circle-card">
+            <!-- Clan Wheel Visual -->
+            <div class="clan-wheel-visual">
+              <div class="clan-wheel-center">
+                <span>CÍRCULO</span>
+                <span>COMETA</span>
+              </div>
+
+              <div class="clan-wheel-node node-milenarios active" data-clan="milenarios" style="color: var(--clan-milenarios); border-color: var(--clan-milenarios);">
+                <img src="Clans_Icon/Milennials_B.png" alt="Milenarios" />
+                <span>Milenarios</span>
+              </div>
+
+              <div class="clan-wheel-node node-fugitivos" data-clan="fugitivos" style="color: var(--clan-fugitivos); border-color: var(--clan-fugitivos);">
+                <img src="Clans_Icon/Fugitives_B.png" alt="Fugitivos" />
+                <span>Fugitivos</span>
+              </div>
+
+              <div class="clan-wheel-node node-depredadores" data-clan="depredadores" style="color: var(--clan-depredadores); border-color: var(--clan-depredadores);">
+                <img src="Clans_Icon/Predators_B.png" alt="Depredadores" />
+                <span>Depredadores</span>
+              </div>
+
+              <div class="clan-wheel-node node-miticos" data-clan="miticos" style="color: var(--clan-miticos); border-color: var(--clan-miticos);">
+                <img src="Clans_Icon/Mythicals_B.png" alt="Míticos" />
+                <span>Míticos</span>
+              </div>
+            </div>
+
+            <!-- Clan Detail Info & Battle Calculator -->
+            <div>
+              <div id="clan-detail-display" style="margin-bottom: 1.5rem;">
+                <!-- Filled dynamically by JavaScript -->
+              </div>
+
+              <!-- Interactive Mini Battle Calculator -->
+              <div style="background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-glass); border-radius: 12px; padding: 1rem;">
+                <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.5rem;">
+                  Simulador de Ventaja Elemental:
+                </div>
+                <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem;">
+                  <select id="calc-attacker-clan" class="reverso-select" style="flex: 1;">
+                    <option value="milenarios">Atacante: 🌳 Milenarios</option>
+                    <option value="fugitivos">Atacante: ⛓️ Fugitivos</option>
+                    <option value="depredadores">Atacante: 🪓 Depredadores</option>
+                    <option value="miticos">Atacante: 🐉 Míticos</option>
+                  </select>
+                  <span style="font-weight: 800;">VS</span>
+                  <select id="calc-defender-clan" class="reverso-select" style="flex: 1;">
+                    <option value="fugitivos">Defensor: ⛓️ Fugitivos</option>
+                    <option value="depredadores">Defensor: 🪓 Depredadores</option>
+                    <option value="miticos">Defensor: 🐉 Míticos</option>
+                    <option value="milenarios">Defensor: 🌳 Milenarios</option>
+                  </select>
+                </div>
+                <div id="calc-battle-result" style="font-size: 0.9rem; padding: 0.5rem; background: rgba(255, 255, 255, 0.04); border-radius: 8px;">
+                  <!-- Live calculation -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: ARQUITECTURA DEL SET BASE (80 CARTAS) -->
+      <section class="slide" id="slide-3">
+        <div class="slide-content-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <div>
+              <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">ESTRUCTURA DE COLECCIÓN</span>
+              <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">El Set Base: 80 Cartas Diseñadas</h2>
+            </div>
+            <div style="background: rgba(245, 158, 11, 0.15); border: 1px solid #f59e0b; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 800; color: #fbbf24;">
+              4 Pilares x 20 Cartas (5 por Clan)
+            </div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.25rem;">
+            <!-- Category 1 -->
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem;">🌟</span>
+                <span style="font-weight: 800; color: #10b981; font-size: 0.9rem;">20 Cartas</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #fff;">Héroes Champions</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; margin-bottom: 1rem; flex: 1;">
+                Los jóvenes protagonistas con sus trajes y armaduras en alta fidelidad. Representan el juego móvil actual con estadísticas de ataque y vida equilibradas.
+              </p>
+              <div style="border-radius: 8px; overflow: hidden; height: 120px; background: #000;">
+                <img src="CC_Export/Azteca.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Azteca" />
+              </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem;">🔥</span>
+                <span style="font-weight: 800; color: #ef4444; font-size: 0.9rem;">20 Cartas</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #fff;">Bestias Kombat</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; margin-bottom: 1rem; flex: 1;">
+                Las criaturas míticas y ancestrales que inspiraron la leyenda. Versiones "evolucionadas" con estadísticas superiores y arte 2D agresivo.
+              </p>
+              <div style="border-radius: 8px; overflow: hidden; height: 120px; background: #000;">
+                <img src="CK_Export/Turbo Dragon.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Turbo Dragon" />
+              </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem;">🌀</span>
+                <span style="font-weight: 800; color: #f59e0b; font-size: 0.9rem;">20 Cartas</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #fff;">Trompos Físicos</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; margin-bottom: 1rem; flex: 1;">
+                El ancla al juguete real. Funcionan como Objetos, Equipamientos o Hechizos que alteran el combate y describen especificaciones del producto.
+              </p>
+              <div style="border-radius: 8px; overflow: hidden; height: 120px; background: #000;">
+                <img src="Trompos_Export/King Cobra.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Trompo King Cobra" />
+              </div>
+            </div>
+
+            <!-- Category 4 -->
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem; display: flex; flex-direction: column;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.75rem;">🏛️</span>
+                <span style="font-weight: 800; color: #06b6d4; font-size: 0.9rem;">20 Cartas</span>
+              </div>
+              <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.4rem; color: #fff;">Arenas / Locaciones</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.4; margin-bottom: 1rem; flex: 1;">
+                Escenarios panorámicos de combate que imponen efectos globales sobre la mesa mientras están en juego, beneficiando a clanes afines.
+              </p>
+              <div style="border-radius: 8px; overflow: hidden; height: 120px; background: #000;">
+                <img src="Arena_Export/Santuario del Sol.png" style="width: 100%; height: 100%; object-fit: cover;" alt="Santuario del Sol" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: COLECCIONADOR 3D EN VIVO -->
+      <section class="slide" id="slide-4">
+        <div class="slide-content-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+            <div>
+              <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">EXPERIENCIA SENSORIAL</span>
+              <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">Interactividad 3D & Acabado Foil</h2>
+              <p style="color: var(--text-muted); font-size: 0.95rem;">
+                Pasa el ratón sobre cada carta para apreciar la inclinación 3D y el brillo holográfico. Haz clic en el botón 🔄 para ver el reverso.
+              </p>
+            </div>
+            <button class="btn-primary" data-action="go-to-showcase">
+              Ver Catálogo Completo (80) ➔
+            </button>
+          </div>
+
+          <!-- Live Sample Cards -->
+          <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 1rem;">
+            <!-- Azteca Champion -->
+            <div class="card-item-wrapper" style="width: 220px;">
+              <div class="card-container" id="slide-sample-1">
+                <div class="card-shine"></div>
+                <div class="card-face card-front">
+                  <img src="CC_Export/Azteca.png" alt="Azteca" />
+                </div>
+                <div class="card-face card-back">
+                  <img src="Reverso_Export/reverso_Oro.png" alt="Reverso" />
+                </div>
+              </div>
+              <div style="margin-top: 0.75rem; text-align: center;">
+                <div style="font-weight: 700; font-size: 0.95rem;">Azteca (Milenarios)</div>
+                <button class="btn-card-action" style="margin: 0.3rem auto 0; width: auto; padding: 0.2rem 0.6rem;" onclick="document.getElementById('slide-sample-1').classList.toggle('is-flipped')">
+                  🔄 Voltear Carta
+                </button>
+              </div>
+            </div>
+
+            <!-- Turbo Dragon Beast -->
+            <div class="card-item-wrapper" style="width: 220px;">
+              <div class="card-container" id="slide-sample-2">
+                <div class="card-shine"></div>
+                <div class="card-face card-front">
+                  <img src="CK_Export/Turbo Dragon.png" alt="Turbo Dragón" />
+                </div>
+                <div class="card-face card-back">
+                  <img src="Reverso_Export/reverso_Oro.png" alt="Reverso" />
+                </div>
+              </div>
+              <div style="margin-top: 0.75rem; text-align: center;">
+                <div style="font-weight: 700; font-size: 0.95rem;">Turbo Dragón (Depredadores)</div>
+                <button class="btn-card-action" style="margin: 0.3rem auto 0; width: auto; padding: 0.2rem 0.6rem;" onclick="document.getElementById('slide-sample-2').classList.toggle('is-flipped')">
+                  🔄 Voltear Carta
+                </button>
+              </div>
+            </div>
+
+            <!-- Trompo King Cobra -->
+            <div class="card-item-wrapper" style="width: 220px;">
+              <div class="card-container" id="slide-sample-3">
+                <div class="card-shine"></div>
+                <div class="card-face card-front">
+                  <img src="Trompos_Export/King Cobra.png" alt="King Cobra" />
+                </div>
+                <div class="card-face card-back">
+                  <img src="Reverso_Export/reverso_Oro.png" alt="Reverso" />
+                </div>
+              </div>
+              <div style="margin-top: 0.75rem; text-align: center;">
+                <div style="font-weight: 700; font-size: 0.95rem;">Trompo King Cobra (Juguete Real)</div>
+                <button class="btn-card-action" style="margin: 0.3rem auto 0; width: auto; padding: 0.2rem 0.6rem;" onclick="document.getElementById('slide-sample-3').classList.toggle('is-flipped')">
+                  🔄 Voltear Carta
+                </button>
+              </div>
+            </div>
+
+            <!-- Templo Milenario Arena -->
+            <div class="card-item-wrapper" style="width: 220px;">
+              <div class="card-container" id="slide-sample-4">
+                <div class="card-shine"></div>
+                <div class="card-face card-front">
+                  <img src="Arena_Export/Templo Milenario.png" alt="Templo Milenario" />
+                </div>
+                <div class="card-face card-back">
+                  <img src="Reverso_Export/reverso_Oro.png" alt="Reverso" />
+                </div>
+              </div>
+              <div style="margin-top: 0.75rem; text-align: center;">
+                <div style="font-weight: 700; font-size: 0.95rem;">Templo Milenario (Arena)</div>
+                <button class="btn-card-action" style="margin: 0.3rem auto 0; width: auto; padding: 0.2rem 0.6rem;" onclick="document.getElementById('slide-sample-4').classList.toggle('is-flipped')">
+                  🔄 Voltear Carta
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: APERTURA DE SOBRES (GACHA SIMULATOR) -->
+      <section class="slide" id="slide-5">
+        <div class="slide-content-card">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">EXPERIENCIA DE JUGADOR</span>
+            <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">Simulador de Apertura de Sobres (Booster Pack)</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; max-width: 650px; margin: 0 auto;">
+              El momento que despierta la emoción y recompensa el juego diario. Cada paquete contiene 5 cartas aleatorias del Set Base.
+            </p>
+          </div>
+
+          <div class="booster-pack-wrapper">
+            <!-- Sealed Pack -->
+            <div id="booster-pack-sealed" style="display: flex; flex-direction: column; align-items: center;">
+              <div class="booster-foil-pouch" id="btn-open-pack">
+                <div style="font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; color: #fbbf24;">SET BASE • TOMO 1</div>
+                <div>
+                  <div style="font-size: 3rem; margin-bottom: 0.25rem;">☄️</div>
+                  <div style="font-size: 1.25rem; font-weight: 900; color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.5);">COMETA CHAMPIONS</div>
+                  <div style="font-size: 0.75rem; color: #cbd5e1; margin-top: 0.25rem;">5 CARTAS COLECCIONABLES</div>
+                </div>
+                <div style="background: rgba(245, 158, 11, 0.9); color: #000; font-weight: 800; font-size: 0.8rem; padding: 0.4rem 1rem; border-radius: 9999px;">
+                  ✂️ ¡TOCAR PARA ABRIR!
+                </div>
+              </div>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 1rem;">
+                Haz clic en el paquete para rasgar el sello holográfico.
+              </p>
+            </div>
+
+            <!-- Revealed Cards Container -->
+            <div id="booster-pack-revealed" style="display: none; width: 100%;">
+              <!-- Injected by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: ESPECIFICACIONES TÉCNICAS (ESTÁNDAR FÍSICO) -->
+      <section class="slide" id="slide-6">
+        <div class="slide-content-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+            <div>
+              <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">MANUFACTURA & ESTÁNDARES</span>
+              <h2 style="font-size: 2.2rem; font-weight: 800; color: #fff;">Especificaciones Técnicas de Producción</h2>
+            </div>
+            <div style="font-size: 2.5rem;">📏</div>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center;">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 12px;">
+                <div style="font-weight: 700; color: #f59e0b; font-size: 1.05rem; margin-bottom: 0.3rem;">Estándar Internacional TCG (Lorcana / MTG)</div>
+                <div style="color: var(--text-muted); font-size: 0.9rem;">
+                  Dimensiones de corte exactas: <strong>63.5 x 88.9 mm</strong> (2.5 x 3.5 pulgadas). Compatible al 100% con micas protectoras, carpetas y deckboxes estándar del mercado.
+                </div>
+              </div>
+
+              <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 12px;">
+                <div style="font-weight: 700; color: #10b981; font-size: 1.05rem; margin-bottom: 0.3rem;">Fidelidad Gráfica & Resolución</div>
+                <div style="color: var(--text-muted); font-size: 0.9rem;">
+                  Archivos preparados a <strong>750 x 1050 px</strong> (Mínimo 300 DPI reales para imprenta offset profesional), relación de aspecto 1 : 1.4 con sangrado de seguridad.
+                </div>
+              </div>
+
+              <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); padding: 1.25rem; border-radius: 12px;">
+                <div style="font-weight: 700; color: #06b6d4; font-size: 1.05rem; margin-bottom: 0.3rem;">3 Variantes de Reverso Oficial</div>
+                <div style="color: var(--text-muted); font-size: 0.9rem;">
+                  Reverso Oro (Coleccionista), Reverso Color (Oficial estándar) y Reverso Bicolor (Versión económica de producción masiva).
+                </div>
+              </div>
+            </div>
+
+            <!-- Visual Comparison of Reversos -->
+            <div style="display: flex; gap: 1rem; justify-content: center; align-items: center;">
+              <div style="text-align: center; width: 140px;">
+                <img src="Reverso_Export/reverso_Oro.png" alt="Reverso Oro" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.6);" />
+                <div style="font-size: 0.8rem; font-weight: 700; color: #fbbf24; margin-top: 0.5rem;">Edición Oro</div>
+              </div>
+              <div style="text-align: center; width: 140px;">
+                <img src="Reverso_Export/reverso_Color.png" alt="Reverso Color" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.6);" />
+                <div style="font-size: 0.8rem; font-weight: 700; color: #38bdf8; margin-top: 0.5rem;">Estándar Color</div>
+              </div>
+              <div style="text-align: center; width: 140px;">
+                <img src="Reverso_Export/reverso_Bi.png" alt="Reverso Bicolor" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.6);" />
+                <div style="font-size: 0.8rem; font-weight: 700; color: #e2e8f0; margin-top: 0.5rem;">Bicolor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 8: ROADMAP & PRÓXIMOS PASOS -->
+      <section class="slide" id="slide-7">
+        <div class="slide-content-card">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <span style="color: var(--accent-gold); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">HOJA DE RUTA ESTRATÉGICA</span>
+            <h2 style="font-size: 2.4rem; font-weight: 900; color: #fff;">Próximos Pasos para el Lanzamiento</h2>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+            <!-- Phase 1 -->
+            <div style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 14px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.75rem; font-weight: 800; background: #10b981; color: #000; padding: 0.2rem 0.6rem; border-radius: 9999px;">FASE 1: COMPLETADA</span>
+                <span style="font-size: 1.25rem;">✅</span>
+              </div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">Diseño del Set Base</h3>
+              <ul style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; padding-left: 1.25rem;">
+                <li>80 Cartas diseñadas y exportadas.</li>
+                <li>Balance numérico de estadísticas y costos.</li>
+                <li>Efectos de arenas y trompos físicos.</li>
+                <li>Archivos maestros PSD de alta resolución.</li>
+              </ul>
+            </div>
+
+            <!-- Phase 2 -->
+            <div style="background: rgba(245, 158, 11, 0.08); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 14px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.75rem; font-weight: 800; background: #f59e0b; color: #000; padding: 0.2rem 0.6rem; border-radius: 9999px;">FASE 2: EN CURSO</span>
+                <span style="font-size: 1.25rem;">📲</span>
+              </div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">Integración Móvil (Álbum)</h3>
+              <ul style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; padding-left: 1.25rem;">
+                <li>Pantalla de Álbum en Cometa Champions.</li>
+                <li>Sistema de recompensas y login diario.</li>
+                <li>Shaders holográficos 3D en Unity.</li>
+                <li>Mecánica de crafteo con Esencia Cometa.</li>
+              </ul>
+            </div>
+
+            <!-- Phase 3 -->
+            <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.3); border-radius: 14px; padding: 1.5rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                <span style="font-size: 0.75rem; font-weight: 800; background: #0ea5e9; color: #000; padding: 0.2rem 0.6rem; border-radius: 9999px;">FASE 3: SIGUIENTE</span>
+                <span style="font-size: 1.25rem;">🏆</span>
+              </div>
+              <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">Producción Física & Torneos</h3>
+              <ul style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; padding-left: 1.25rem;">
+                <li>Impresión física de barajas de inicio y sobres.</li>
+                <li>Inclusión de cartas en trompos de juguete reales.</li>
+                <li>Códigos QR para canje digital en la app.</li>
+                <li>Reglamento de torneos presenciales 1v1.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button class="btn-primary" style="font-size: 1.1rem; padding: 0.9rem 2.2rem;" data-action="go-to-showcase">
+              <span>¡Explorar el Catálogo de las 80 Cartas Ahora!</span> 🎴
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Presentation Navigation Toolbar (Bottom) -->
+    <div class="presentation-controls">
+      <button class="slide-nav-btn" id="btn-prev-slide" title="Diapositiva Anterior (←)">
+        ◀
+      </button>
+
+      <div class="slide-dots" id="slide-dots">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="slide-counter" id="slide-counter-text">
+        <span>1</span> / 8
+      </div>
+
+      <button class="slide-nav-btn" id="btn-next-slide" title="Siguiente Diapositiva (→ o Espacio)">
+        ▶
+      </button>
+    </div>
+  </main>
+
+  <!-- =========================================================================
+       MODO SHOWCASE / CATÁLOGO COMPLETO
+       ========================================================================= -->
+  <section id="showcase-view">
+    <div class="showcase-header">
+      <h2 class="showcase-title">Catálogo Oficial del Set Base</h2>
+      <p class="showcase-subtitle">
+        Explora las 80 cartas del universo Cometa Champions. Selecciona categorías y clanes, o haz clic en cualquier carta para examinarla en 3D con estadísticas completas.
+      </p>
+    </div>
+
+    <!-- Filters & Search Toolbar -->
+    <div class="filter-toolbar">
+      <!-- Category Filter -->
+      <div class="toolbar-row">
+        <div class="category-tabs">
+          <button class="tab-btn active" data-category="all">
+            <span>✨</span> Todas (80)
+          </button>
+          <button class="tab-btn" data-category="champions">
+            <span>🌟</span> Héroes Champions (20)
+          </button>
+          <button class="tab-btn" data-category="kombat">
+            <span>🔥</span> Bestias Kombat (20)
+          </button>
+          <button class="tab-btn" data-category="trompos">
+            <span>🌀</span> Trompos Físicos (20)
+          </button>
+          <button class="tab-btn" data-category="arenas">
+            <span>🏛️</span> Arenas / Locaciones (20)
+          </button>
+        </div>
+
+        <!-- Reverso Style Selector -->
+        <div class="reverso-selector-wrapper">
+          <label for="reverso-select">Reverso Activo:</label>
+          <select id="reverso-select" class="reverso-select">
+            <option value="oro">✨ Reverso Oro</option>
+            <option value="color">🎨 Reverso Color Oficial</option>
+            <option value="bi">⚪ Reverso Bicolor</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Clan Filter & Search Input -->
+      <div class="toolbar-row">
+        <div class="clan-tabs">
+          <button class="tab-btn active" data-clan="all">
+            Todos los Clanes
+          </button>
+          <button class="tab-btn clan-milenarios" data-clan="milenarios">
+            🌳 Milenarios
+          </button>
+          <button class="tab-btn clan-fugitivos" data-clan="fugitivos">
+            ⛓️ Fugitivos
+          </button>
+          <button class="tab-btn clan-depredadores" data-clan="depredadores">
+            🪓 Depredadores
+          </button>
+          <button class="tab-btn clan-miticos" data-clan="miticos">
+            🐉 Míticos
+          </button>
+        </div>
+
+        <div class="search-input-wrapper">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="search-cards-input" class="search-input" placeholder="Buscar por nombre, rareza o habilidad..." />
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats Bar -->
+    <div class="catalog-stats-bar">
+      <div id="catalog-stats-count">
+        Mostrando <strong>80</strong> de <strong>80</strong> cartas
+      </div>
+      <div>
+        <span style="font-size: 0.8rem; color: var(--text-muted);">
+          Tip: Haz clic en 🔄 para voltear una carta, o en 🔍 para ver stats y lore.
+        </span>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="cards-grid" id="cards-grid">
+      <!-- Populated dynamically by JavaScript -->
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODO SIMULADOR DE BATALLA (MARVEL SNAP & POKÉMON POCKET)
+       ========================================================================= -->
+  <section id="battle-view">
+    <!-- Battle Status Header -->
+    <div class="battle-header-bar">
+      <div class="battle-status-group">
+        <div class="battle-turn-badge">
+          <span>⏳</span> <span id="battle-turn-indicator">Turno <strong>1</strong> de <strong>6</strong></span>
+        </div>
+        <div class="battle-energy-display" id="battle-player-energy">
+          🟢 <strong>1</strong> / 1
+        </div>
+        <div class="battle-score-counter">
+          <span>Arenas: </span> <span id="battle-lanes-score"><span style="color:#30d158;font-weight:800;">0</span> vs <span style="color:#ff453a;font-weight:800;">0</span></span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; align-items: center;">
+        <button class="btn-secondary" id="btn-battle-help" style="padding: 0.45rem 0.95rem; font-size: 0.85rem;" title="Cómo Jugar y Reglas de Combate">
+          ❓ Ayuda
+        </button>
+        <button class="btn-secondary" id="btn-battle-restart" style="padding: 0.45rem 1rem; font-size: 0.85rem;" title="Reiniciar Partida con Nuevas Arenas">
+          🔄 Reiniciar
+        </button>
+        <button class="btn-end-turn" id="btn-battle-end-turn">
+          <span>FINALIZAR TURNO</span> ➔
+        </button>
+      </div>
+    </div>
+
+    <!-- Battle 3 Lanes / Arenas Board -->
+    <div class="battle-board-grid" id="battle-lanes-container">
+      <!-- 3 Arenas rendered dynamically by battle-simulator.js -->
+    </div>
+
+    <!-- Player Hand Drawer -->
+    <div class="battle-hand-wrapper">
+      <div class="battle-hand-header">
+        <div>
+          <strong style="color: var(--text-main);">Tu Mano de Combate</strong> 
+          <span style="font-size: 0.8rem; margin-left: 0.5rem; color: var(--text-muted);">(Toca una carta para seleccionarla y luego toca la arena donde quieras desplegarla)</span>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted);">
+          Tip: Si juegas una carta en este turno, puedes tocarla en tu arena para regresarla a tu mano antes de finalizar el turno.
+        </div>
+      </div>
+      <div class="battle-hand-cards" id="battle-player-hand">
+        <!-- Hand cards rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODAL INSPECTOR DE CARTA DETALLADA
+       ========================================================================= -->
+  <div class="modal-overlay" id="card-modal">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="modal-close-btn" title="Cerrar (Esc)">×</button>
+
+      <!-- Visual 3D Card Display -->
+      <div class="modal-card-visual">
+        <div class="modal-card-flipper" id="modal-card-flipper" title="Haz clic para voltear la carta">
+          <div class="card-face card-front">
+            <img id="modal-card-front-img" src="" alt="Carta Frontal" />
+          </div>
+          <div class="card-face card-back">
+            <img id="modal-card-back-img" src="" alt="Carta Reverso" />
+          </div>
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); margin-top: 1rem; text-align: center;">
+          🔄 Haz clic sobre la carta para voltear al reverso
+        </div>
+      </div>
+
+      <!-- Card Data & Lore -->
+      <div class="modal-details">
+        <div>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem;">
+            <span id="modal-card-id" style="font-size: 0.8rem; font-weight: 800; color: var(--text-muted); letter-spacing: 0.05em;">CC-01</span>
+            <span id="modal-card-rarity" style="font-size: 0.8rem; font-weight: 700; color: #fbbf24;">Épica</span>
+          </div>
+
+          <h2 id="modal-card-name" style="font-size: 1.8rem; font-weight: 900; margin-bottom: 0.5rem; color: #fff;">Nombre Carta</h2>
+
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+            <div id="modal-card-clan" class="badge-clan milenarios">🌳 Milenarios</div>
+            <div id="modal-card-category" style="background: rgba(255, 255, 255, 0.08); padding: 0.25rem 0.6rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 600;">Héroes Champions</div>
+          </div>
+
+          <!-- Stats Chips -->
+          <div class="stat-chips" id="modal-card-stats">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Ability or Effect -->
+          <div id="modal-card-effect-section" style="margin-bottom: 1.25rem;">
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 0.3rem;">
+              Efecto / Habilidad Especial
+            </div>
+            <div id="modal-card-effect" style="font-size: 0.95rem; color: #e2e8f0; line-height: 1.5; background: rgba(255, 255, 255, 0.04); padding: 0.75rem; border-radius: 10px; border-left: 3px solid var(--accent-gold);">
+              Descripción de efecto
+            </div>
+          </div>
+
+          <!-- Flavor Text or Lore -->
+          <div id="modal-card-flavor-section">
+            <div style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; color: var(--text-muted); margin-bottom: 0.3rem;">
+              Lore / Cita
+            </div>
+            <div id="modal-card-flavor" style="font-size: 0.88rem; color: var(--text-muted); font-style: italic; line-height: 1.5;">
+              "Frase emblemática del personaje o datos del juguete real."
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+          <span style="font-size: 0.75rem; color: var(--text-muted);">Estándar Lorcana / MTG (300 DPI)</span>
+          <button class="btn-secondary" style="padding: 0.4rem 1rem; font-size: 0.85rem;" onclick="document.getElementById('modal-card-flipper').classList.toggle('is-flipped')">
+            🔄 Voltear
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL DE FIN DE PARTIDA DEL SIMULADOR DE BATALLA
+       ========================================================================= -->
+  <div class="modal-overlay" id="battle-gameover-modal">
+    <div class="modal-window" style="max-width: 540px; flex-direction: column; text-align: center; padding: 2.5rem;">
+      <h2 id="battle-modal-title" style="font-size: 2.2rem; font-weight: 900; margin-bottom: 0.5rem; color: #30d158;">¡VICTORIA!</h2>
+      <p id="battle-modal-desc" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem; line-height: 1.5;">
+        Has dominado el tablero y conquistado las arenas legendarias de Cometa Champions.
+      </p>
+
+      <div id="battle-modal-stats" style="background: rgba(255, 255, 255, 0.04); border: 1px solid var(--border-glass); border-radius: 16px; padding: 1rem;">
+        <!-- Stats populated dynamically -->
+      </div>
+
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+        <button class="btn-primary" id="battle-modal-restart-btn" style="font-size: 1rem; padding: 0.8rem 2rem;">
+          🔄 Jugar Otra Partida
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL DE AYUDA: CÓMO JUGAR EL SIMULADOR
+       ========================================================================= -->
+  <div class="modal-overlay" id="battle-help-modal">
+    <div class="modal-window" style="max-width: 820px; flex-direction: column; padding: 2.25rem; max-height: 88vh; overflow-y: auto;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1.5rem; border-bottom: 1px solid var(--border-glass); padding-bottom: 1rem;">
+        <div>
+          <span style="color: var(--accent-gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em;">MANUAL DE COMBATE TCG</span>
+          <h2 style="font-size: 1.8rem; font-weight: 900; color: var(--text-main); margin-top: 0.2rem;">¿Cómo Jugar al Simulador?</h2>
+          <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 0.25rem;">
+            Estrategia de 3 Arenas inspirada en <strong>MARVEL SNAP</strong> con combate dinámico y ventajas de <strong>Pokémon TCG Pocket</strong>.
+          </p>
+        </div>
+        <button class="modal-close-btn" id="battle-help-close-btn" title="Cerrar (Esc)">×</button>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin-bottom: 1.75rem;">
+        <!-- Card 1: Objetivo -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 1.4rem;">🏆</span>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main);">1. El Objetivo (Victoria)</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+            El combate se disputa en <strong>3 Arenas</strong> a la vez. Al finalizar el <strong>Turno 6</strong>, el jugador que lidere <strong>al menos 2 de las 3 arenas</strong> gana la partida. Si hay empate (1-1 y una arena empatada), gana quien acumule mayor poder total acumulado.
+          </p>
+        </div>
+
+        <!-- Card 2: Energía y Turnos -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 1.4rem;">🟢</span>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main);">2. Energía Progresiva (1 a 6)</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+            Tu energía máxima aumenta cada turno: Turno 1 = 1🟢, Turno 2 = 2🟢 ... Turno 6 = 6🟢. Puedes jugar todas las cartas que tu energía disponible te permita en ese turno.
+          </p>
+        </div>
+
+        <!-- Card 3: Círculo Cometa -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem; grid-column: 1 / -1;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 1.4rem;">🌀</span>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main);">3. Ventajas del Círculo Cometa (+1 Daño Elemental)</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem;">
+            Si tu carta comparte arena con una carta rival de un clan vulnerable a su elemento, tu carta recibe <strong>+1 de Poder (⚔️)</strong> adicional de forma automática:
+          </p>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.6rem; font-size: 0.82rem;">
+            <div style="background: rgba(48, 209, 88, 0.1); border: 1px solid rgba(48, 209, 88, 0.3); padding: 0.45rem 0.7rem; border-radius: 8px; color: var(--clan-milenarios);">
+              🌳 <strong>Milenarios</strong> vencen a ⛓️ <strong>Fugitivos</strong>
+            </div>
+            <div style="background: rgba(255, 159, 10, 0.1); border: 1px solid rgba(255, 159, 10, 0.3); padding: 0.45rem 0.7rem; border-radius: 8px; color: var(--clan-fugitivos);">
+              ⛓️ <strong>Fugitivos</strong> vencen a 🪓 <strong>Depredadores</strong>
+            </div>
+            <div style="background: rgba(255, 69, 58, 0.1); border: 1px solid rgba(255, 69, 58, 0.3); padding: 0.45rem 0.7rem; border-radius: 8px; color: var(--clan-depredadores);">
+              🪓 <strong>Depredadores</strong> vencen a 🐉 <strong>Míticos</strong>
+            </div>
+            <div style="background: rgba(191, 90, 242, 0.1); border: 1px solid rgba(191, 90, 242, 0.3); padding: 0.45rem 0.7rem; border-radius: 8px; color: var(--clan-miticos);">
+              🐉 <strong>Míticos</strong> vencen a 🌳 <strong>Milenarios</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Desplegar -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 1.4rem;">👆</span>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main);">4. Despliegue de Cartas</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+            Toca una carta en tu mano inferior para seleccionarla. Luego, toca el botón <strong>"➕ Desplegar Aquí"</strong> o la arena donde deseas posicionarla (máximo 4 cartas por arena).
+          </p>
+        </div>
+
+        <!-- Card 5: Deshacer (Undo) -->
+        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass); border-radius: 14px; padding: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+            <span style="font-size: 1.4rem;">↩️</span>
+            <h3 style="font-size: 1.05rem; font-weight: 800; color: var(--text-main);">5. Deshacer Jugadas (Undo)</h3>
+          </div>
+          <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;">
+            ¿Te equivocaste de arena? Toca cualquier carta jugada en el <strong>turno actual</strong> (tienen un distintivo ✕) para <strong>regresarla a tu mano</strong> y recuperar su energía antes de presionar <em>FINALIZAR TURNO</em>.
+          </p>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <button class="btn-primary" id="battle-help-gotit-btn" style="padding: 0.75rem 2.25rem; font-size: 0.95rem;">
+          ¡Entendido, a Combatir! ⚔️
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/cards-data.js"></script>
+  <script src="js/battle-simulator.js"></script>
+  <script src="js/presentation.js"></script>
+</body>
+</html>

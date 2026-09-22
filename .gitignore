@@ -1,0 +1,17 @@
+# Photoshop Master Files (exceed GitHub 100MB limit)
+*.psd
+
+# AI Generation Raw Assets
+AI/
+
+# Temporary / Scratch Files
+scratch/
+tmp*
+tm.png
+Layer *.png
+bg*.png
+reversa.png
+king-cobra.png
+UI_test.png
+.DS_Store
+Thumbs.db

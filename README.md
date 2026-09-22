@@ -68,12 +68,35 @@ Para una inmersión profunda en las reglas, stats de las 80 cartas y el plan de 
 
 ---
 
+## 🌐 Presentación Web Interactiva & Simulador de Batalla
+
+El proyecto cuenta con una Single-Page Application (SPA) interactiva desarrollada con tecnología web nativa (HTML5, Vanilla CSS3 y JavaScript moderno) con temática Apple Day/Night:
+
+*   **🖥️ Modo Presentación:** Diapositivas interactivas (8 slides) que presentan el juego, el lore, los 4 clanes, las 4 categorías de cartas y la estrategia.
+*   **🎴 Catálogo Interactivo (80 Cartas):** Visor 3D con efecto tilt/giro, filtros dinámicos por clan, categoría, búsqueda por texto, modal inspector y simulador de apertura de sobres booster.
+*   **⚔️ Simulador de Batalla (Marvel Snap + Pokémon Pocket):**
+    *   3 Arenas simultáneas con efectos de terreno.
+    *   6 turnos con energía incremental (1 a 6).
+    *   Mecánica de ventaja elemental del **Círculo Cometa (+1 ⚔️)**.
+    *   Despliegue de Trompos Físicos de soporte.
+    *   Modo deshacer jugadas antes de finalizar turno.
+    *   Bot oponente con IA autónoma.
+    *   Modal de ayuda integrado (`❓ Ayuda`) con guía completa de reglas.
+
+### Cómo ejecutarlo:
+1. Abre `index.html` directamente en tu navegador favorito o sírvelo localmente (ej: `npx serve .` o Live Server).
+2. Para desplegarlo en la web automáticamente, activa **GitHub Pages** en la configuración del repositorio (`Settings > Pages > Deploy from branch: master / root`).
+
+---
+
 ## 🛠️ Estado del Proyecto
 - [x] Diseño de los 4 Clanes y Círculo de Ventajas.
 - [x] Listado completo de las 80 cartas del Set Base.
 - [x] Auditoría de Balance (Stats vs Costo).
-- [x] Prototipado visual de Héroes, Bestias y Arenas.
-- [ ] Implementación de UI de Álbum en la App.
+- [x] Exportación de las 80 cartas finales en alta resolución + 3 reversos.
+- [x] Presentación Web Interactiva con diseño Apple y modo Day/Night.
+- [x] Catálogo Digital interactivo de 80 cartas con simulador de sobres.
+- [x] Simulador de Batallas interactivo 1v1 estilo Marvel Snap + Pokémon Pocket.
 - [ ] Producción de Cartas Físicas.
 
 ---
