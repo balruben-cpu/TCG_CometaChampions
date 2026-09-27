@@ -131,9 +131,11 @@
   const presView = document.getElementById('presentation-view');
   const showView = document.getElementById('showcase-view');
   const battleView = document.getElementById('battle-view');
+  const uiDesignView = document.getElementById('ui-design-view');
   const btnModePres = document.getElementById('btn-mode-presentation');
   const btnModeShow = document.getElementById('btn-mode-showcase');
   const btnModeBattle = document.getElementById('btn-mode-battle');
+  const btnModeUi = document.getElementById('btn-mode-ui');
   const btnPrevSlide = document.getElementById('btn-prev-slide');
   const btnNextSlide = document.getElementById('btn-next-slide');
   const slideCounter = document.getElementById('slide-counter-text');
@@ -153,10 +155,12 @@
     if (presView) presView.style.display = 'none';
     if (showView) showView.style.display = 'none';
     if (battleView) battleView.style.display = 'none';
+    if (uiDesignView) uiDesignView.style.display = 'none';
 
     if (btnModePres) btnModePres.classList.remove('active');
     if (btnModeShow) btnModeShow.classList.remove('active');
     if (btnModeBattle) btnModeBattle.classList.remove('active');
+    if (btnModeUi) btnModeUi.classList.remove('active');
 
     if (mode === 'presentation') {
       if (presView) presView.style.display = 'flex';
@@ -174,6 +178,10 @@
       if (window.CometaBattle && window.CometaBattle.start) {
         window.CometaBattle.start();
       }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (mode === 'ui') {
+      if (uiDesignView) uiDesignView.style.display = 'block';
+      if (btnModeUi) btnModeUi.classList.add('active');
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
@@ -669,6 +677,40 @@
     if (btnModePres) btnModePres.addEventListener('click', () => setMode('presentation'));
     if (btnModeShow) btnModeShow.addEventListener('click', () => setMode('showcase'));
     if (btnModeBattle) btnModeBattle.addEventListener('click', () => setMode('battle'));
+    if (btnModeUi) btnModeUi.addEventListener('click', () => setMode('ui'));
+
+    // UI Design Screen Tabs
+    document.querySelectorAll('.ui-tab-btn[data-ui-screen]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ui-tab-btn[data-ui-screen]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const screen = btn.getAttribute('data-ui-screen');
+        document.querySelectorAll('.ui-screen-panel').forEach(p => p.classList.remove('active'));
+        const targetPanel = document.getElementById(`ui-panel-${screen}`);
+        if (targetPanel) targetPanel.classList.add('active');
+        playSound('click');
+      });
+    });
+
+    // UI View Mode (Split, Design, Unity)
+    document.querySelectorAll('.ui-seg-btn[data-view]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ui-seg-btn[data-view]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const view = btn.getAttribute('data-view');
+        document.querySelectorAll('.ui-comparison-grid').forEach(grid => {
+          grid.classList.remove('view-design', 'view-unity');
+          if (view === 'design') grid.classList.add('view-design');
+          else if (view === 'unity') grid.classList.add('view-unity');
+        });
+        playSound('click');
+      });
+    });
+
+    // Jump-to buttons in slides for UI Showcase
+    document.querySelectorAll('[data-action="go-to-ui"]').forEach(el => {
+      el.addEventListener('click', () => setMode('ui'));
+    });
 
     // Slide Nav
     if (btnPrevSlide) btnPrevSlide.addEventListener('click', () => goToSlide(state.currentSlide - 1));

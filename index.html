@@ -28,6 +28,9 @@
       <button class="mode-btn" id="btn-mode-battle">
         <span>⚔️</span> Simulador de Batalla
       </button>
+      <button class="mode-btn" id="btn-mode-ui">
+        <span>✨</span> Diseño UI & Progreso
+      </button>
     </div>
 
     <!-- Action Buttons -->
@@ -104,6 +107,9 @@
               </button>
               <button class="btn-secondary" data-action="go-to-showcase">
                 <span>Explorar Catálogo 3D</span> 🎴
+              </button>
+              <button class="btn-secondary" data-action="go-to-ui">
+                <span>Diseños UI & Progreso</span> ✨
               </button>
             </div>
           </div>
@@ -529,12 +535,15 @@
                 <span style="font-size: 1.25rem;">📲</span>
               </div>
               <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #fff;">Integración Móvil (Álbum)</h3>
-              <ul style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; padding-left: 1.25rem;">
+              <ul style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6; padding-left: 1.25rem; margin-bottom: 1rem;">
                 <li>Pantalla de Álbum en Cometa Champions.</li>
                 <li>Sistema de recompensas y login diario.</li>
                 <li>Shaders holográficos 3D en Unity.</li>
                 <li>Mecánica de crafteo con Esencia Cometa.</li>
               </ul>
+              <button class="btn-primary" data-action="go-to-ui" style="width: 100%; padding: 0.5rem; font-size: 0.85rem; justify-content: center;">
+                <span>Ver Progreso & Diseños UI</span> ✨
+              </button>
             </div>
 
             <!-- Phase 3 -->
@@ -721,6 +730,407 @@
       </div>
       <div class="battle-hand-cards" id="battle-player-hand">
         <!-- Hand cards rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       MODO DISEÑO UI & PROGRESO (SHOWCASE DE DISEÑO)
+       ========================================================================= -->
+  <section id="ui-design-view" style="display: none;">
+    <!-- Header -->
+    <div class="ui-design-header">
+      <div class="ui-design-badge">
+        <span>🚀</span> ROADMAP FASE 2 • EVOLUCIÓN VISUAL AAA
+      </div>
+      <h2 class="ui-design-title">Showcase de Diseño UI & Progreso</h2>
+      <p class="ui-design-subtitle">
+        Compara directamente las capturas de progreso del prototipo funcional en Unity con el diseño final de interfaz comercial de alta gama (estilo Marvel Snap, Hearthstone y Pokémon Pocket).
+      </p>
+
+      <!-- Key Metrics -->
+      <div class="ui-metrics-row">
+        <div class="ui-metric-card">
+          <div class="ui-metric-icon">📱</div>
+          <div>
+            <div class="ui-metric-value">3 Pantallas Core</div>
+            <div class="ui-metric-label">Álbum, Mulligan y Batalla</div>
+          </div>
+        </div>
+        <div class="ui-metric-card">
+          <div class="ui-metric-icon">🌀</div>
+          <div>
+            <div class="ui-metric-value">4 Clanes Integrados</div>
+            <div class="ui-metric-label">Identidad visual y paletas temáticas</div>
+          </div>
+        </div>
+        <div class="ui-metric-card">
+          <div class="ui-metric-icon">✨</div>
+          <div>
+            <div class="ui-metric-value">Estándar AAA</div>
+            <div class="ui-metric-label">Glassmorphism, shaders y micro-interacciones</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Tabs between screens -->
+      <div class="ui-tabs-nav">
+        <button class="ui-tab-btn active" data-ui-screen="album">
+          <span>🎴</span> 1. Álbum de Cartas & Pedestal 3D
+        </button>
+        <button class="ui-tab-btn" data-ui-screen="mulligan">
+          <span>🎲</span> 2. Fase de Mulligan Táctica
+        </button>
+        <button class="ui-tab-btn" data-ui-screen="battle">
+          <span>⚔️</span> 3. Tablero de Batalla (3 Arenas)
+        </button>
+      </div>
+    </div>
+
+    <!-- Mode Toolbar (Split / Design / Unity) -->
+    <div class="ui-mode-toolbar">
+      <div style="display: flex; align-items: center; gap: 0.6rem;">
+        <span style="font-weight: 700; font-size: 0.9rem; color: var(--text-main);">Modo de Visualización:</span>
+      </div>
+      <div class="ui-segmented-control" id="ui-view-control">
+        <button class="ui-seg-btn active" data-view="split">
+          <span>⚖️</span> Lado a Lado (Comparativa)
+        </button>
+        <button class="ui-seg-btn" data-view="design">
+          <span>✨</span> Solo Diseño UI Final
+        </button>
+        <button class="ui-seg-btn" data-view="unity">
+          <span>⚙️</span> Solo Progreso Unity
+        </button>
+      </div>
+    </div>
+
+    <!-- SCREEN 1: ÁLBUM DE CARTAS & PEDESTAL 3D -->
+    <div class="ui-screen-panel active" id="ui-panel-album">
+      <div class="ui-comparison-grid" id="ui-grid-album">
+        <!-- Unity Column -->
+        <div class="ui-col-unity">
+          <div class="ui-image-card">
+            <div class="ui-image-overlay-badge ui-badge-unity">
+              <span>⚙️</span> PROGRESO UNITY ACTUAL
+            </div>
+            <img src="assets/ui_design/screenshot_album_unity.jpg" alt="Prototipo Unity - Álbum de Cartas" onclick="window.open(this.src)" title="Clic para ampliar en alta resolución" />
+            <div class="ui-image-caption">
+              <h4>Estado Funcional en Unity (com.DefaultCompany.TCGCometa)</h4>
+              <p>Mecánicas implementadas: Carga de colección desde script, visor 3D con pedestal básico, filtros de clan y datos numéricos en texto plano.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Target AAA Column -->
+        <div class="ui-col-design">
+          <div class="ui-image-card">
+            <div class="ui-image-overlay-badge ui-badge-target">
+              <span>✨</span> DISEÑO UI FINAL AAA (OBJETIVO)
+            </div>
+            <img src="assets/ui_design/ui_album_redesign.jpg" alt="Diseño UI Final - Álbum de Cartas" onclick="window.open(this.src)" title="Clic para ampliar en alta resolución" />
+            <div class="ui-image-caption">
+              <h4>Acabado Final Comercial & UX Pulida</h4>
+              <p>Pedestal holográfico con halo de luz y giro 360°, medallones para atributos (Costo diamante, Daño espadas, Escudo defensa), barra foil con botón dorado 'Upgrade Foil' y monedero superior con cristales cósmicos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlights -->
+      <div class="ui-feature-highlights">
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">💎</span>
+            <div class="ui-feature-card-title">Monedero Superior & Perfil</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Visualización integrada de Nivel 01 con barra de XP, Monedas de Oro Cometa (1,361) y Cristales de Esencia (150) con acceso rápido de compra.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🪐</span>
+            <div class="ui-feature-card-title">Pedestal Holográfico 3D</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Base tecnológica con anillos de luz y destellos cósmicos. Controles táctiles integrados: Voltear, Auto-Giro, Vista Frente y selección de rareza foil.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🛡️</span>
+            <div class="ui-feature-card-title">Medallones HUD de Atributos</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Sustitución de números sueltos por tres emblemas diegéticos: Diamante Azul (Costo), Espadas Cruzadas (Ataque) y Escudo de Plata (Defensa/Vida).
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">✨</span>
+            <div class="ui-feature-card-title">Evolución & Upgrade Foil</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Barra de progreso de cartas duplicadas (5/5) con botón dorado pulsante "UPGRADE FOIL (120 GOLD)" que desbloquea shaders holográficos exclusivos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 2: FASE DE MULLIGAN TÁCTICA -->
+    <div class="ui-screen-panel" id="ui-panel-mulligan">
+      <div class="ui-comparison-grid" id="ui-grid-mulligan">
+        <!-- Unity Column -->
+        <div class="ui-col-unity">
+          <div class="ui-image-card">
+            <div class="ui-image-overlay-badge ui-badge-unity">
+              <span>⚙️</span> PROGRESO UNITY ACTUAL
+            </div>
+            <img src="assets/ui_design/screenshot_mulligan_unity.jpg" alt="Prototipo Unity - Fase de Mulligan" onclick="window.open(this.src)" title="Clic para ampliar en alta resolución" />
+            <div class="ui-image-caption">
+              <h4>Ventana Modal Funcional en Unity</h4>
+              <p>Mecánica de selección de 4 cartas iniciales, fondo oscurecido y botones básicos planos en verde y azul sin jerarquía táctil.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Target AAA Column -->
+        <div class="ui-col-design">
+          <div class="ui-image-card">
+            <div class="ui-image-overlay-badge ui-badge-target">
+              <span>✨</span> DISEÑO UI FINAL AAA (OBJETIVO)
+            </div>
+            <img src="assets/ui_design/ui_mulligan_redesign.jpg" alt="Diseño UI Final - Fase de Mulligan" onclick="window.open(this.src)" title="Clic para ampliar en alta resolución" />
+            <div class="ui-image-caption">
+              <h4>Ventana Táctica Glassmorphic con Profundidad</h4>
+              <p>Bisel cibernético con runas luminosas, desenfoque cinemático del campo de batalla, halo carmesí de descarte sobre cartas seleccionadas y botones táctiles con icono.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlights -->
+      <div class="ui-feature-highlights">
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🔮</span>
+            <div class="ui-feature-card-title">Modal Glassmorphic Diegético</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Caja flotante de obsidiana con biseles biselados, runas arcanas grabadas y resplandor cian que se integra naturalmente al lore cometa.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🔴</span>
+            <div class="ui-feature-card-title">Aura de Selección Reactiva</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Resplandor rojo neón sobre las cartas marcadas para redraw (ej. Espectro y Jumbo Cobra), eliminando cualquier ambigüedad de qué cartas se cambiarán.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🏷️</span>
+            <div class="ui-feature-card-title">Chips Flotantes [COST | PWR]</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Badges elevados en la parte superior de cada carta con gemas de elemento y contraste perfecto para evaluar rápidamente la curva de maná de apertura.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🎯</span>
+            <div class="ui-feature-card-title">Botones Táctiles de Acción</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            "CONSERVAR MANO" en verde esmeralda con checkmark y "CAMBIAR SELECCIONADAS (2)" en azul eléctrico con icono dinámico que indica la cantidad exacta.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCREEN 3: TABLERO DE BATALLA (3 ARENAS) -->
+    <div class="ui-screen-panel" id="ui-panel-battle">
+      <div class="ui-comparison-grid" id="ui-grid-battle">
+        <!-- Unity Column -->
+        <div class="ui-col-unity">
+          <div class="ui-image-card">
+            <div class="ui-image-overlay-badge ui-badge-unity">
+              <span>⚙️</span> PROGRESO UNITY ACTUAL
+            </div>
+            <img src="assets/ui_design/screenshot_battle_unity.jpg" alt="Prototipo Unity - Tablero de Batalla" onclick="window.open(this.src)" title="Clic para ampliar en alta resolución" />
+            <div class="ui-image-caption">
+              <h4>Simulador 3 Lanes en Unity</h4>
+              <p>Mecánica funcional estilo Marvel Snap: 3 arenas simultáneas, marcadores de poder, slots para 4 cartas por bando y mano de cartas desplegable.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Target AAA Column -->
+        <div class="ui-col-design">
+          <div class="ui-image-card">
+            <div class="ui-image-overlay-badge ui-badge-target">
+              <span>✨</span> DISEÑO UI FINAL AAA (OBJETIVO)
+            </div>
+            <img src="assets/ui_design/ui_battle_redesign.jpg" alt="Diseño UI Final - Tablero de Batalla" onclick="window.open(this.src)" title="Clic para ampliar en alta resolución" />
+            <div class="ui-image-caption">
+              <h4>Arena de Combate Inmersiva de Alta Fidelidad</h4>
+              <p>Arenas con temática textural por clan (Piedra, Neón, Magma), marcadores hexagonales con feedback de estado, orbe central de energía eléctrica y estante curvado de cartas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Highlights -->
+      <div class="ui-feature-highlights">
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">⚡</span>
+            <div class="ui-feature-card-title">Núcleo Central de Energía</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Esfera cósmica cargada de electricidad estática y arcos voltaicos que muestra la energía activa (3 / 3 ENERGÍA) con animación de recarga turno a turno.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🏟️</span>
+            <div class="ui-feature-card-title">Tematización Viva de Arenas</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Cada lane adopta los materiales de su clan: Templo Milenario (piedra rúnica y musgo), Pista Draconia (asfalto neón morado) y Llanuras del Tirano (grietas de magma incandescente).
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🔢</span>
+            <div class="ui-feature-card-title">Marcadores Hexagonales HUD</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Displays diegéticos de puntuación (2 vs 0, 0 vs 0, 5 vs 0) acompañados de cintillos tácticos ("Rival en ventaja", "Empate", "Victoria") de alta visibilidad.
+          </p>
+        </div>
+
+        <div class="ui-feature-card">
+          <div class="ui-feature-card-header">
+            <span class="ui-feature-card-icon">🃏</span>
+            <div class="ui-feature-card-title">Estante Curvo de Mano & Fin de Turno</div>
+          </div>
+          <p class="ui-feature-card-desc">
+            Bandeja inferior curvada con iluminación perimetral, cartas en abanico con auras de costo/jugabilidad y un botón verde "FINALIZAR TURNO" con pulso gravitatorio.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SPECIFICATIONS & UNITY TECHNICAL ROADMAP -->
+    <div class="ui-specs-section">
+      <div class="ui-specs-title">
+        <span>🎨</span> Sistema de Diseño Visual (Design Tokens)
+      </div>
+      <p class="ui-specs-subtitle">
+        Valores de color, tipografía y efectos estandarizados para implementar directamente en Unity UGUI o UI Toolkit.
+      </p>
+
+      <div class="ui-tokens-grid">
+        <div class="ui-token-card">
+          <div class="ui-color-swatch" style="background: #30d158; box-shadow: 0 0 15px rgba(48,209,88,0.5);"></div>
+          <div class="ui-token-info">
+            <h5>Milenarios (Naturaleza)</h5>
+            <code>#30d158 • RGB(48, 209, 88)</code>
+          </div>
+        </div>
+
+        <div class="ui-token-card">
+          <div class="ui-color-swatch" style="background: #bf5af2; box-shadow: 0 0 15px rgba(191,90,242,0.5);"></div>
+          <div class="ui-token-info">
+            <h5>Míticos / Fugitivos (Sombra)</h5>
+            <code>#bf5af2 • RGB(191, 90, 242)</code>
+          </div>
+        </div>
+
+        <div class="ui-token-card">
+          <div class="ui-color-swatch" style="background: #ff453a; box-shadow: 0 0 15px rgba(255,69,58,0.5);"></div>
+          <div class="ui-token-info">
+            <h5>Depredadores (Fuego)</h5>
+            <code>#ff453a • RGB(255, 69, 58)</code>
+          </div>
+        </div>
+
+        <div class="ui-token-card">
+          <div class="ui-color-swatch" style="background: #f5c518; box-shadow: 0 0 15px rgba(245,197,24,0.5);"></div>
+          <div class="ui-token-info">
+            <h5>Oro Cometa (Foil / Monedas)</h5>
+            <code>#f5c518 • RGB(245, 197, 24)</code>
+          </div>
+        </div>
+
+        <div class="ui-token-card">
+          <div class="ui-color-swatch" style="background: #2997ff; box-shadow: 0 0 15px rgba(41,151,255,0.5);"></div>
+          <div class="ui-token-info">
+            <h5>Cian Eléctrico (Energía / HUD)</h5>
+            <code>#2997ff • RGB(41, 151, 255)</code>
+          </div>
+        </div>
+
+        <div class="ui-token-card">
+          <div class="ui-color-swatch" style="background: #0a0e17; border-color: #38bdf8;"></div>
+          <div class="ui-token-info">
+            <h5>Obsidiana Cósmica (Bases)</h5>
+            <code>#0a0e17 • RGB(10, 14, 23)</code>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui-specs-title" style="margin-top: 2rem;">
+        <span>🛠️</span> Guía de Implementación Técnica en Unity
+      </div>
+      <p class="ui-specs-subtitle">
+        Pasos recomendados para que el equipo de desarrollo traslade estos renders al motor Unity:
+      </p>
+
+      <div class="ui-unity-checklist">
+        <div class="ui-unity-step">
+          <div class="ui-unity-step-num">PASO 01 • CANVAS & ESCALADO</div>
+          <div class="ui-unity-step-title">Canvas Scaler Multi-Resolución</div>
+          <p class="ui-unity-step-desc">
+            Configurar en <strong>Scale With Screen Size</strong> (Referencia: 1920x1080, Match Width/Height: 0.5) para soportar tanto móviles 19.5:9 como tablets 4:3 y pantallas de PC 16:9.
+          </p>
+        </div>
+
+        <div class="ui-unity-step">
+          <div class="ui-unity-step-num">PASO 02 • SPRITES MODULARES</div>
+          <div class="ui-unity-step-title">9-Sliced Sprites para Botones</div>
+          <p class="ui-unity-step-desc">
+            Exportar los marcos de cristal, los fondos de modal y los botones con bordes biselados como sprites 9-slice para redimensionar sin distorsión ni pérdida de definición.
+          </p>
+        </div>
+
+        <div class="ui-unity-step">
+          <div class="ui-unity-step-num">PASO 03 • SHADERS & MATERIALES</div>
+          <div class="ui-unity-step-title">URP Shader Graph Holográfico</div>
+          <p class="ui-unity-step-desc">
+            Crear un material en Shader Graph con una textura arcoíris y specular reflectante vinculada a la rotación 3D del giroscopio del móvil o posición del cursor.
+          </p>
+        </div>
+
+        <div class="ui-unity-step">
+          <div class="ui-unity-step-num">PASO 04 • POST-PROCESSING BLOOM</div>
+          <div class="ui-unity-step-title">Resplandor Diegético (URP Bloom)</div>
+          <p class="ui-unity-step-desc">
+            Añadir volumen de Bloom con umbral 1.2 para que los orbes de energía, los rayos eléctricos y los marcos dorados emitan un brillo real sobre el escenario oscuro.
+          </p>
+        </div>
       </div>
     </div>
   </section>

@@ -83,6 +83,11 @@ El proyecto cuenta con una Single-Page Application (SPA) interactiva desarrollad
     *   Bot oponente con IA autónoma.
     *   Modal de ayuda integrado (`❓ Ayuda`) con guía completa de reglas.
 
+*   **✨ Showcase de Diseño UI & Progreso (Evolución Visual AAA):**
+    *   Comparativa interactiva antes/después (lado a lado) entre las capturas de progreso reales de Unity y los mockups comerciales AAA de alta fidelidad.
+    *   3 Pantallas clave: Álbum de Cartas & Pedestal 3D, Fase de Mulligan Táctica y Tablero de Batalla (3 Arenas).
+    *   Design tokens oficiales, paleta de colores por clan y checklist de implementación para Unity (UGUI / URP Shader Graph).
+
 ### Cómo ejecutarlo:
 1. Abre `index.html` directamente en tu navegador favorito o sírvelo localmente (ej: `npx serve .` o Live Server).
 2. Para desplegarlo en la web automáticamente, activa **GitHub Pages** en la configuración del repositorio (`Settings > Pages > Deploy from branch: master / root`).
@@ -97,6 +102,7 @@ El proyecto cuenta con una Single-Page Application (SPA) interactiva desarrollad
 - [x] Presentación Web Interactiva con diseño Apple y modo Day/Night.
 - [x] Catálogo Digital interactivo de 80 cartas con simulador de sobres.
 - [x] Simulador de Batallas interactivo 1v1 estilo Marvel Snap + Pokémon Pocket.
+- [x] Showcase de Diseño UI & Prototipo Unity (Evolución Visual AAA).
 - [ ] Producción de Cartas Físicas.
 
 ---
